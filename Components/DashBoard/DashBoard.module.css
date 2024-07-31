@@ -15,7 +15,6 @@
     width: 1px;
 }
 
-
 .left {
     min-width: 18vw;
     height: 100vh;
@@ -413,10 +412,6 @@
     padding-left: 1.5vw;
 }
 
-
-
-
-
 .tasksContainer {
     width: 90%;
     height: 30vh;
@@ -430,7 +425,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 .row1 {
     display: flex;
@@ -468,13 +462,10 @@
     text-transform: uppercase;
 }
 
-
-
 .more,
 .arrow {
     padding-right: 1vw;
 }
-
 
 .arrow {
     width: 2.5vw;
@@ -485,10 +476,6 @@
     width: 3vw;
     cursor: pointer;
 }
-
-
-
-
 
 .datatitle {
     font-size: 18px;
@@ -536,7 +523,6 @@
     overflow-x: hidden;
     width: 15vw;
     align-items: center;
-
 }
 
 .radioLabel {
@@ -556,7 +542,6 @@
 .boxes {
     width: 1.2vw;
 }
-
 
 .inputvalues {
     font-size: 18px;
@@ -587,7 +572,6 @@
     display: flex;
     flex-direction: row;
     position: relative;
-
 }
 
 .sectionchangebuttons1 {
@@ -726,6 +710,7 @@
 .deletepara {
     font-weight: 500;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .deletepara {
@@ -741,7 +726,6 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-
 }
 
 .deleteoverlayContent {
@@ -757,7 +741,6 @@
     border-radius: 15px;
     border: solid;
     border-color: #E2E2E2;
-
 }
 
 .deletetext {
@@ -869,6 +852,10 @@
     display: flex;
     flex-direction: row;
     gap: 2vw;
+}
+
+.buttons {
+    cursor: pointer;
 }
 
 .successOverlay {

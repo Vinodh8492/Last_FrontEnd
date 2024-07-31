@@ -65,7 +65,6 @@ function Register() {
     } catch (error) {
       console.log(error)
     }
-
   };
 
   return (
@@ -81,12 +80,12 @@ function Register() {
         <p className={styles.text}>Register</p>
         <div className={styles.container}>
           <img src={Person} className={styles.person} alt="Person Icon" />
-          <input type="text" name="name" placeholder="Name" maxLength={12} onChange={handleChange} value={formData.name} className={styles.input} />
+          <input type="text" name="name" placeholder="Name" maxLength={20} onChange={handleChange} value={formData.name} className={styles.input} />
         </div>
 
         <div className={styles.container}>
           <img src={Mail} className={styles.mail} alt="Mail Icon" />
-          <input type="text" name="email" placeholder="Email" maxLength={16} onChange={handleChange} value={formData.email} className={styles.input} />
+          <input type="text" name="email" placeholder="Email" maxLength={30} onChange={handleChange} value={formData.email} className={styles.input} />
         </div>
 
         <div className={styles.container}>
@@ -98,7 +97,7 @@ function Register() {
             onChange={handleChange}
             value={formData.password}
             className={styles.input}
-            maxLength={10}
+            maxLength={20}
           />
           <img
             src={showPassword ? EyeSlash : Eye}
@@ -117,7 +116,7 @@ function Register() {
             onChange={handleChange}
             value={formData.confirmpassword}
             className={styles.input}
-            maxLength={10}
+            maxLength={20}
           />
           <img
             src={showConfirmPassword ? EyeSlash : Eye}

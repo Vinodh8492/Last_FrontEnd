@@ -55,7 +55,6 @@ function Analytics() {
   const [done, setDone] = useState(0)
   const [showOverlay, setShowOverlay] = useState(false);
 
-
   const fetchAllTasks = async () => {
     const response = await getAllTask();
     const userTasks = response.data.filter(task => {
@@ -204,7 +203,6 @@ function Analytics() {
               <p className={styles.digit4} >{dueDateTasksCount}</p>
             </div>
           </div>
-
         </div>
 
         {showOverlay && (

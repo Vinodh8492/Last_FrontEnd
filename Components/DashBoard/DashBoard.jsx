@@ -51,7 +51,6 @@ const OverlayComponent = ({
 }) => {
 
 
-
   const [addedEmails, setAddedEmails] = useState([])
   const userEmail = localStorage.getItem('userEmail');
   if (!userEmail) {
@@ -130,7 +129,7 @@ const OverlayComponent = ({
           className={styles.tasktitle}
           value={taskData.title || ''}
           onChange={handleChange}
-          maxLength={24}
+          maxLength={40}
         />
 
         <div>
@@ -180,8 +179,6 @@ const OverlayComponent = ({
             <span className={styles.redAsterisk}>*</span>
           </div>
           <div className={styles.inputSectionContainer}>
-
-
             {inputSections.map(section => (
               <div key={section.id} className={styles.inputsection}>
                 <input
@@ -290,8 +287,6 @@ const AddPeopleOverlay = ({ onClose }) => {
   };
 
 
-
-
   const handleCloseSuccessOverlay = () => {
     setShowSuccessOverlay(false);
     onClose()
@@ -306,7 +301,7 @@ const AddPeopleOverlay = ({ onClose }) => {
       <div className={styles.addoverlayContent}>
         <div className={styles.addcontents} >
           <p className={styles.addheader}>Add people to the board</p>
-          <input type="text" placeholder='Enter the email' className={styles.addinput} onChange={handleChange} maxLength={21} value={enteredEmail} />
+          <input type="text" placeholder='Enter the email' className={styles.addinput} onChange={handleChange} maxLength={30} value={enteredEmail} />
           <div className={styles.addbuttons} >
             <button className={styles.addcancelButton} onClick={onClose}>Cancel</button>
             <button className={styles.addemailButton} onClick={() => { handleAddEmail(enteredEmail) }} >Add Email</button>
@@ -373,7 +368,6 @@ function DashBoard() {
     }
     requiredData()
   }, []);
-
 
   const [taskData, setTaskData] = useState({
     title: '',
@@ -505,7 +499,6 @@ function DashBoard() {
   };
 
   const [selectedPriority, setSelectedPriority] = useState('');
-
   const [userEmails, setUserEmails] = useState([]);
 
   const handleAddEmailSuccess = (email) => {
@@ -673,6 +666,7 @@ function DashBoard() {
       ...prevState,
       checklist: newInputSections.map(section => section.value),
     }));
+
   };
 
   const handleInputChange = (id, value) => {
@@ -738,7 +732,6 @@ function DashBoard() {
       const newChecklist = [...taskData];
       const item = newChecklist.find(task => task._id === taskId).checklist[index];
       item.checked = !item.checked;
-
       setTaskData(newChecklist);
 
       const response = await axios.put(
@@ -763,9 +756,7 @@ function DashBoard() {
       setShowLinkCopiedImage(false);
     }, 2000);
     setShowMoreActions(false)
-
   };
-
 
   const handleAddClick = () => {
     setIsOverlayVisible(true);
@@ -796,7 +787,6 @@ function DashBoard() {
       ...prevState,
       [taskId]: !prevState[taskId]
     }));
-
   };
 
   function isDateInPast(taskDate) {
@@ -830,7 +820,6 @@ function DashBoard() {
       id: index,
       value: item,
     })));
-
 
     setIsEditing(true)
     if (!isOverlayVisible) {
@@ -921,9 +910,6 @@ function DashBoard() {
       setTimeout(() => {
         window.location.reload();
       }, 2000);
-
-
-
     } catch (error) {
       console.error('Failed to create task:', error);
       toast.error('Failed to create or edit task. Please try again.');
@@ -1335,13 +1321,10 @@ function DashBoard() {
                       </div>
                     );
                   }
-                  return null; // Render nothing if the task doesn't match the done status
+                  return null;
                 })
               )}
             </div>
-
-
-
           </div>
         </div>
       </div>

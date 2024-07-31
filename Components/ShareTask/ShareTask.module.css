@@ -79,7 +79,7 @@
     margin-left: 14.5vw;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 1.8vh;
     overflow-y: auto;
     align-items: center;
 }
@@ -95,7 +95,7 @@
     border-radius: 10px;
     border-color: rgb(217, 216, 214);
     padding-left: 1vw;
-    width: 42vw;
+    width: 43vw;
     overflow-x: hidden;
 }
 
@@ -155,9 +155,6 @@
 
 
 
-
-
-
 @media screen and (max-width: 600px) {
 
     * {
@@ -187,7 +184,6 @@
     }
 
     .container {
-
         width: 90vw;
         min-height: 30vh;
         height: auto;
@@ -217,11 +213,16 @@
         text-transform: uppercase;
     }
 
+    .titlecontainer {
+        max-width: 80vw;
+        overflow-wrap: break-word;
+    }
+
     .datatitle {
-        font-size: 21px;
+        font-size: 20px;
         font-weight: 600;
         margin-top: 1.5vh;
-        margin-bottom: 3.5vh;
+        margin-bottom: 2.5vh;
         margin-top: 1vh;
     }
 
@@ -239,7 +240,7 @@
     }
 
     .checklistInput {
-        margin-left: 15vw;
+        margin-left: 12vw;
         display: flex;
         flex-direction: column;
         gap: 1.2vh;
@@ -261,7 +262,7 @@
         padding-left: 1vw;
         min-height: 5vh;
         height: auto;
-        width: 78vw;
+        width: 85vw;
         align-items: center;
     }
 
@@ -269,11 +270,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 4vw;
+        gap: 3vw;
         position: relative;
         height: auto;
         min-height: 2vh;
-        max-height: 5vh;
+        max-height: 6.3vh;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -282,12 +283,12 @@
         width: 4vw;
         height: 3vh;
         margin-left: 2vw;
-
     }
+
 
     .inputvalues {
         font-size: 16px;
-        width: 66vw;
+        width: 69vw;
         min-height: 3.9vh;
         height: auto;
         word-break: break-all;

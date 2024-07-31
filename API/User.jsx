@@ -31,7 +31,6 @@ export const updateUserDetails = async (userId, updatedFormData) => {
     return response.data;
   } catch (error) {
     console.error('Error updating task:', error);
-
   }
 };
 
@@ -42,7 +41,6 @@ export const getUserDetails = async (userId) => {
     return response.data;
   } catch (error) {
     console.log(error);
-
   }
 };
 
@@ -53,7 +51,6 @@ export const getAllUserDetails = async () => {
     return response.data;
   } catch (error) {
     console.log(error);
-
   }
 };
 
@@ -64,7 +61,6 @@ export const getAllEmailDetails = async (userEmail) => {
     return response.data;
   } catch (error) {
     console.log(error);
-
   }
 };
 
@@ -75,6 +71,5 @@ export const postAllEmailDetails = async (userEmail, email) => {
     return response.data;
   } catch (error) {
     console.log(error);
-
   }
 };

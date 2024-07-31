@@ -6,7 +6,6 @@ const backendUrl = 'https://last-backend-dz62.onrender.com/task'
 export const createTask = async (task) => {
   try {
     const reqUrl = `${backendUrl}/create`;
-
     const response = await axios.post(reqUrl, task);
     return response.data;
   } catch (error) {
@@ -18,7 +17,6 @@ export const createTask = async (task) => {
 export const editTask = async (taskId, updatedFormData) => {
   try {
     const reqUrl = `${backendUrl}/edit/${taskId}`;
-
     const response = await axios.put(reqUrl, updatedFormData);
     return response.data;
   } catch (error) {
@@ -30,7 +28,6 @@ export const editTask = async (taskId, updatedFormData) => {
 export const deleteTask = async (taskId) => {
   try {
     const reqUrl = `${backendUrl}/delete/${taskId}`;
-
     const response = await axios.delete(reqUrl);
     return response.data;
   } catch (error) {

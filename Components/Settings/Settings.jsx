@@ -86,7 +86,6 @@ function Settings() {
 
       if (oldPassword) {
 
-
         const passwordMatches = await bcrypt.compare(oldPassword, userData.password);
 
         if (!oldPassword || !newPassword) {
@@ -110,7 +109,6 @@ function Settings() {
         toast.error('Only one field can be updated at a time');
         return;
       }
-
 
       if (Object.keys(updatedFields).length > 0) {
         const updatedUser = await updateUserDetails(userId, updatedFields);
@@ -161,7 +159,7 @@ function Settings() {
   }
 
   const handleReadOnlyClick = () => {
-    toast.info("E-mail field is read-only, you cannot modify it");
+    toast.info("E-mail cannot be updated");
   };
 
 

@@ -49,7 +49,6 @@ function ShareTask() {
     });
     console.log(taskData)
 
-
     const getPriorityImage = () => {
         switch (taskData.priority) {
             case 'moderate priority':
@@ -93,8 +92,10 @@ function ShareTask() {
 
                             <p className={styles.prioritytext} > {taskData.priority}</p>
                         </div>
-                        <p className={styles.datatitle} >{taskData.title}</p>
 
+                        <div className={styles.titlecontainer} >
+                            <p className={styles.datatitle} >{taskData.title}</p>
+                        </div>
                         <p className={styles.checked} >Checklist ({taskData.checklist.filter(item => item.checked).length}/{taskData.checklist.length})</p>
                         <div className={styles.checklistInputarea} >
                             <div className={styles.checklistInput}>
