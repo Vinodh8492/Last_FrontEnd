@@ -58,9 +58,7 @@ function Login() {
     }
   };
 
-  useEffect(() => {
-    formData
-  })
+
 
   return (
     <div className={styles.body}>
